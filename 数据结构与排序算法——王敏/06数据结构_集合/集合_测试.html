@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title></title>
+</head>
+<body>
+  <script src="../../../dist/atguigu-utils.js"></script>
+  <script>
+    const {Set} = aUtils
+    
+    var set1 = new Set();
+    var set2 = new Set();
+    var union = new Set();
+    var intersect = new Set();
+    var diff = new Set();
+
+    set1.add("data1");
+    set1.add("data2");
+    set1.add("data3");
+    set2.add("data2");
+    set2.add("data3");
+    set2.add("data4");
+    set2.remove("data3");
+    console.log(set1.size(),set1.show());
+    console.log(set2.size(),set2.show());
+    console.log(set1.contains("data1"));
+
+    union = set1.union(set2);
+    intersect = set1.intersect(set2);
+    diff = set1.difference(set2);
+    console.log(union.show());
+    console.log(intersect.show());
+    console.log(diff.show());
+
+    var set3 = new Set();
+    set3.add("data1");
+    subset1 = set2.subset(set1);
+    console.log(subset1);
+    subset2 = set3.subset(set1);
+    console.log(subset2);
+  </script>
+</body>
+</html>

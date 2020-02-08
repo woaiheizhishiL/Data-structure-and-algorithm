@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script src="../../../dist/atguigu-utils.js"></script>
+  <script>
+    
+    function dec2bin(decNumer) {
+      const stack = new aUtils.Stack()
+      while (decNumer > 0) {
+        let remainder = decNumer % 2
+        stack.push(remainder)
+        decNumer = Math.floor(decNumer / 2)
+      }
+
+      let binayriStrng = ""
+      while (!stack.isEmpty()) {
+        binayriStrng += stack.pop()
+      }
+      
+      return binayriStrng
+    }
+
+    console.log(dec2bin(10))
+    console.log(dec2bin(233))
+
+  </script>
+</body>
+</html>

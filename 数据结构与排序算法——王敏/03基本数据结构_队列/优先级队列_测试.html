@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title></title>
+</head>
+<body>
+  <script src="../../../dist/atguigu-utils.js"></script>
+  <script>
+    var pQueue = new aUtils.PriorityQueue()
+
+    pQueue.enqueue("abc", 10)
+    pQueue.enqueue("cba", 5)
+    pQueue.enqueue("nba", 12)
+    pQueue.enqueue("mba", 3)
+
+    var size = pQueue.size()
+    for (var i = 0; i < size; i++) {
+        var item = pQueue.dequeue()
+        console.log(item.data, item.priority)
+    }
+  </script>
+</body>
+</html>
